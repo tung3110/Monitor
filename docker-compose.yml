@@ -69,6 +69,11 @@ services:
     user: "472"
     depends_on:
     - prometheus
+  pushgateway:
+    image: prom/pushgateway
+    ports:
+    - 9091:9091
+    restart: always
 
 volumes:
   grafana-db:
